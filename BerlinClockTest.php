@@ -21,4 +21,10 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("OOOO", $actual);
     }
 
+    public function test_translateSimpleMinutes_given1_shouldReturnYOOO(){
+        $actual = $this->berlinClock->translateSimpleMinutes(1);
+
+        $this->assertEquals("YOOO", $actual);
+    }
+
 }
