@@ -7,11 +7,16 @@ use PHPUnit\Framework\TestCase;
 
 class BerlinClockTest extends TestCase
 {
+    private $berlinClock;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->berlinClock = new BerlinClock();
+    }
 
     public function test_translateSimpleMinutes_given0_shouldReturnOOOO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock->translateSimpleMinutes(0);
+        $actual = $this->berlinClock->translateSimpleMinutes(0);
 
         $this->assertEquals("OOOO", $actual);
     }
