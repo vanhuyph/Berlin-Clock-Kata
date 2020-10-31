@@ -12,4 +12,9 @@ class BerlinClock
 
         return "OOOO";
     }
+
+    public function translateBlockOf5minutes(int $int): string
+    {
+       return "OOOOOOOOOOO";
+    }
 }
