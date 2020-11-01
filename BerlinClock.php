@@ -43,6 +43,7 @@ class BerlinClock
     public function translateBlockOf5hours(int $int)
     {
         if($int === 5) return "ROOO";
+        if($int === 10) return "RROO";
 
         return "OOOO";
     }
