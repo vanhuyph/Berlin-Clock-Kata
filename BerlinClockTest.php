@@ -148,7 +148,7 @@ class BerlinClockTest extends TestCase
     }
 
     public function test_translateBlockOf5hours_given0_shouldReturn4O(){
-        $actual = $this->berlinClock->translateBlockOf5hours(0);
+        $actual = $this->actTranslateBlockOf5hours(0);
 
         $this->assertEquals("OOOO", $actual);
     }
@@ -166,6 +166,11 @@ class BerlinClockTest extends TestCase
     private function actTranslateSimpleHours(int $int): string
     {
         return $this->berlinClock->translateSimpleHours($int);
+    }
+
+    private function actTranslateBlockOf5hours(int $int): string
+    {
+        return $this->berlinClock->translateBlockOf5hours($int);
     }
 
 }
