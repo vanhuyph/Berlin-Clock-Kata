@@ -39,4 +39,9 @@ class BerlinClock
 
         return "OOOO";
     }
+
+    public function translateBlockOf5hours(int $int)
+    {
+        return "OOOO";
+    }
 }
