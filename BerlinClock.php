@@ -29,4 +29,9 @@ class BerlinClock
 
        return "OOOOOOOOOOO";
     }
+
+    public function translateSimpleHours(int $int): string
+    {
+        return "OOOO";
+    }
 }
