@@ -35,6 +35,7 @@ class BerlinClock
         if($int === 1) return "ROOO";
         if($int === 2) return "RROO";
         if($int === 3) return "RRRO";
+        if($int === 4) return "RRRR";
 
         return "OOOO";
     }
