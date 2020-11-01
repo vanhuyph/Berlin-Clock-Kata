@@ -177,6 +177,12 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("RRRR", $actual);
     }
 
+    public function test_translateSeconds_given0_shouldReturnR(){
+        $actual = $this->berlinClock->translateSeconds(0);
+
+        $this->assertEquals("R", $actual);
+    }
+
     private function actTranslateSimpleMinutes(int $int): string
     {
         return $this->berlinClock->translateSimpleMinutes($int);

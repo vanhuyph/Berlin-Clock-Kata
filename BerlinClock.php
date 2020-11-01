@@ -49,4 +49,9 @@ class BerlinClock
 
         return "OOOO";
     }
+
+    public function translateSeconds(int $int)
+    {
+        return "R";
+    }
 }
