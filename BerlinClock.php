@@ -32,6 +32,8 @@ class BerlinClock
 
     public function translateSimpleHours(int $int): string
     {
+        if($int === 1) return "ROOO";
+
         return "OOOO";
     }
 }
