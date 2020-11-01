@@ -17,6 +17,7 @@ class BerlinClock
     {
         if($int === 5) return "YOOOOOOOOOO";
         if($int === 10) return "YYOOOOOOOOO";
+        if($int === 15) return "YYROOOOOOOO";
 
        return "OOOOOOOOOOO";
     }
