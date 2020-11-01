@@ -25,6 +25,7 @@ class BerlinClock
         if($int === 40) return "YYRYYRYYOOO";
         if($int === 45) return "YYRYYRYYROO";
         if($int === 50) return "YYRYYRYYRYO";
+        if($int === 55) return "YYRYYRYYRYY";
 
        return "OOOOOOOOOOO";
     }
