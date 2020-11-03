@@ -45,7 +45,7 @@ class BerlinClock
         if($hours >= 5 && $hours <= 9) return "ROOO";
         if($hours >= 10 && $hours <= 14) return "RROO";
         if($hours >= 15 && $hours <= 19) return "RRRO";
-        if($hours >= 20 && $hours <= 24) return "RRRR";
+        if($hours >= 20 && $hours <= 23) return "RRRR";
 
         return "OOOO";
     }
