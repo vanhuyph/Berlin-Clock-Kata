@@ -50,9 +50,9 @@ class BerlinClock
         return "OOOO";
     }
 
-    public function translateSeconds(int $int): string
+    public function translateSeconds(int $seconds): string
     {
-        if($int%2 === 1) return "O";
+        if($seconds%2 === 1) return "O";
 
         return "R";
     }
