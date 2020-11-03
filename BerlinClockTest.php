@@ -222,7 +222,7 @@ class BerlinClockTest extends TestCase
 
     private function actTranslateFullClock(int $hours, int $minutes, int $seconds): string
     {
-        return $this->berlinClock->translateFullClock(00, 00, 00);
+        return $this->berlinClock->translateFullClock($hours, $minutes, $seconds);
     }
 
 }
