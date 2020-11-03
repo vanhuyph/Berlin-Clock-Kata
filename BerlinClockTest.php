@@ -199,9 +199,9 @@ class BerlinClockTest extends TestCase
         return $this->berlinClock->translateBlockOf5minutes($minutes);
     }
 
-    private function actTranslateSimpleHours(int $int): string
+    private function actTranslateSimpleHours(int $minutes): string
     {
-        return $this->berlinClock->translateSimpleHours($int);
+        return $this->berlinClock->translateSimpleHours($minutes);
     }
 
     private function actTranslateBlockOf5hours(int $int): string
