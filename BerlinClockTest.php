@@ -22,7 +22,7 @@ class BerlinClockTest extends TestCase
     }
 
     public function test_translateSimpleMinutes_given1_shouldReturnYOOO(){
-        $actual = $this->actTranslateSimpleMinutes(01);
+        $actual = $this->actTranslateSimpleMinutes(1);
 
         $this->assertEquals("YOOO", $actual);
     }

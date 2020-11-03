@@ -30,12 +30,12 @@ class BerlinClock
        return "OOOOOOOOOOO";
     }
 
-    public function translateSimpleHours(int $int): string
+    public function translateSimpleHours(int $minutes): string
     {
-        if($int === 1) return "ROOO";
-        if($int === 2) return "RROO";
-        if($int === 3) return "RRRO";
-        if($int === 4) return "RRRR";
+        if($minutes%5 === 1) return "ROOO";
+        if($minutes%5 === 2) return "RROO";
+        if($minutes%5 === 3) return "RRRO";
+        if($minutes%5 === 4) return "RRRR";
 
         return "OOOO";
     }
