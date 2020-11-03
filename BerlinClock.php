@@ -40,7 +40,7 @@ class BerlinClock
         return "OOOO";
     }
 
-    public function translateBlockOf5hours(int $hours)
+    public function translateBlockOf5hours(int $hours): string
     {
         if($hours >= 5 && $hours <= 9) return "ROOO";
         if($hours >= 10 && $hours <= 14) return "RROO";
