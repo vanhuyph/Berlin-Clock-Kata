@@ -57,4 +57,17 @@ class BerlinClock
         return "R";
     }
 
+    public function translateFullClock(int $hours, int $minutes, int $seconds): string
+    {
+        $result = "";
+        $separator = "_";
+        $result = $this->translateSeconds($seconds) . $separator
+            .$this->translateBlockOf5hours($hours) . $separator
+            .$this->translateSimpleHours($hours) . $separator
+            .$this->translateBlockOf5minutes($minutes) . $separator
+            .$this->translateSimpleMinutes($minutes);
+
+        return $result;
+    }
+
 }
