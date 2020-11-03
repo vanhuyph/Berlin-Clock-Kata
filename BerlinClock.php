@@ -13,19 +13,19 @@ class BerlinClock
         return "OOOO";
     }
 
-    public function translateBlockOf5minutes(int $int): string
+    public function translateBlockOf5minutes(int $minutes): string
     {
-        if($int === 5) return "YOOOOOOOOOO";
-        if($int === 10) return "YYOOOOOOOOO";
-        if($int === 15) return "YYROOOOOOOO";
-        if($int === 20) return "YYRYOOOOOOO";
-        if($int === 25) return "YYRYYOOOOOO";
-        if($int === 30) return "YYRYYROOOOO";
-        if($int === 35) return "YYRYYRYOOOO";
-        if($int === 40) return "YYRYYRYYOOO";
-        if($int === 45) return "YYRYYRYYROO";
-        if($int === 50) return "YYRYYRYYRYO";
-        if($int === 55) return "YYRYYRYYRYY";
+        if($minutes >= 5 && $minutes <= 9) return "YOOOOOOOOOO";
+        if($minutes >= 10 && $minutes <= 14) return "YYOOOOOOOOO";
+        if($minutes >= 15 && $minutes <= 19) return "YYROOOOOOOO";
+        if($minutes >= 20 && $minutes <= 24) return "YYRYOOOOOOO";
+        if($minutes >= 25 && $minutes <= 29) return "YYRYYOOOOOO";
+        if($minutes >= 30 && $minutes <= 34) return "YYRYYROOOOO";
+        if($minutes >= 35 && $minutes <= 39) return "YYRYYRYOOOO";
+        if($minutes >= 40 && $minutes <= 44) return "YYRYYRYYOOO";
+        if($minutes >= 45 && $minutes <= 49) return "YYRYYRYYROO";
+        if($minutes >= 50 && $minutes <= 54) return "YYRYYRYYRYO";
+        if($minutes >= 55 && $minutes <= 59) return "YYRYYRYYRYY";
 
        return "OOOOOOOOOOO";
     }
