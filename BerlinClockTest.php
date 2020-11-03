@@ -190,7 +190,7 @@ class BerlinClockTest extends TestCase
     }
 
     public function test_translateFullClock_givenMidnight_shouldReturn1R23O(){
-        $actual = $this->berlinClock->translateFullClock(00,00,00);
+        $actual = $this->actTranslateFullClock(00,00,00);
 
         $this->assertEquals("R_OOOO_OOOO_OOOOOOOOOOO_OOOO", $actual);
     }
@@ -218,6 +218,11 @@ class BerlinClockTest extends TestCase
     private function actTranslateSeconds(int $int): string
     {
         return $this->berlinClock->translateSeconds($int);
+    }
+
+    private function actTranslateFullClock(int $hours, int $minutes, int $seconds): string
+    {
+        return $this->berlinClock->translateFullClock(00, 00, 00);
     }
 
 }
