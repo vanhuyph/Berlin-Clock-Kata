@@ -5,12 +5,10 @@ require "BerlinClock.php";
 
 use PHPUnit\Framework\TestCase;
 
-class BerlinClockTest extends TestCase
-{
+class BerlinClockTest extends TestCase{
     private $berlinClock;
 
-    protected function setUp(): void
-    {
+    protected function setUp(): void{
         parent::setUp();
         $this->berlinClock = new BerlinClock();
     }
@@ -201,33 +199,27 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("O_RRRO_ROOO_YYRYOOOOOOO_YOOO", $actual);
     }
 
-    private function actTranslateSimpleMinutes(int $minutes): string
-    {
+    private function actTranslateSimpleMinutes(int $minutes): string{
         return $this->berlinClock->translateSimpleMinutes($minutes);
     }
 
-    private function actTranslateBlockOf5minutes(int $minutes): string
-    {
+    private function actTranslateBlockOf5minutes(int $minutes): string{
         return $this->berlinClock->translateBlockOf5minutes($minutes);
     }
 
-    private function actTranslateSimpleHours(int $hours): string
-    {
+    private function actTranslateSimpleHours(int $hours): string{
         return $this->berlinClock->translateSimpleHours($hours);
     }
 
-    private function actTranslateBlockOf5hours(int $hours): string
-    {
+    private function actTranslateBlockOf5hours(int $hours): string{
         return $this->berlinClock->translateBlockOf5hours($hours);
     }
 
-    private function actTranslateSeconds(int $seconds): string
-    {
+    private function actTranslateSeconds(int $seconds): string{
         return $this->berlinClock->translateSeconds($seconds);
     }
 
-    private function actTranslateFullClock(int $hours, int $minutes, int $seconds): string
-    {
+    private function actTranslateFullClock(int $hours, int $minutes, int $seconds): string{
         return $this->berlinClock->translateFullClock($hours, $minutes, $seconds);
     }
 

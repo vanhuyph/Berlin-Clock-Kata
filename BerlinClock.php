@@ -1,10 +1,8 @@
 <?php
 
-class BerlinClock
-{
+class BerlinClock{
 
-    public function translateSimpleMinutes(int $minutes): string
-    {
+    public function translateSimpleMinutes(int $minutes): string{
         if($minutes%5 === 1) return "YOOO";
         if($minutes%5 === 2) return "YYOO";
         if($minutes%5 === 3) return "YYYO";
@@ -13,8 +11,7 @@ class BerlinClock
         return "OOOO";
     }
 
-    public function translateBlockOf5minutes(int $minutes): string
-    {
+    public function translateBlockOf5minutes(int $minutes): string{
         if($minutes >= 5 && $minutes <= 9) return "YOOOOOOOOOO";
         if($minutes >= 10 && $minutes <= 14) return "YYOOOOOOOOO";
         if($minutes >= 15 && $minutes <= 19) return "YYROOOOOOOO";
@@ -30,8 +27,7 @@ class BerlinClock
        return "OOOOOOOOOOO";
     }
 
-    public function translateSimpleHours(int $hours): string
-    {
+    public function translateSimpleHours(int $hours): string{
         if($hours%5 === 1) return "ROOO";
         if($hours%5 === 2) return "RROO";
         if($hours%5 === 3) return "RRRO";
@@ -40,8 +36,7 @@ class BerlinClock
         return "OOOO";
     }
 
-    public function translateBlockOf5hours(int $hours): string
-    {
+    public function translateBlockOf5hours(int $hours): string{
         if($hours >= 5 && $hours <= 9) return "ROOO";
         if($hours >= 10 && $hours <= 14) return "RROO";
         if($hours >= 15 && $hours <= 19) return "RRRO";
@@ -50,15 +45,13 @@ class BerlinClock
         return "OOOO";
     }
 
-    public function translateSeconds(int $seconds): string
-    {
+    public function translateSeconds(int $seconds): string{
         if($seconds%2 === 1) return "O";
 
         return "R";
     }
 
-    public function translateFullClock(int $hours, int $minutes, int $seconds): string
-    {
+    public function translateFullClock(int $hours, int $minutes, int $seconds): string{
         $result = "";
         $separator = "_";
         $result = $this->translateSeconds($seconds) . $separator
